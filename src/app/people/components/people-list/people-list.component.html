@@ -1,0 +1,9 @@
+<div class="people-list">
+    <h1 class="people-list__title">Star Wars</h1>
+    <app-list-view class="people-list__results" 
+    [itemsList]="peopleList" 
+    [count]="count"
+    [isLoading]="isLoading"
+    [linkModule]="'people'"
+    (newPageLoad)="onScroll()"></app-list-view>
+</div>

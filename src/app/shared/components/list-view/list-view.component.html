@@ -1,0 +1,10 @@
+<div class="list-view" infinite-scroll [infiniteScrollDistance]="scrollDistance"
+        [infiniteScrollThrottle]="throttle" (scrolled)="onScroll()">
+        <a [routerLink]="'/people/' + (i + 1)" *ngFor="let item of itemsList; let i = index">
+            <app-list-item class="list-view__item"
+            [item]="item"
+            [index]="i + 1">
+            </app-list-item>
+        </a>
+        <mat-spinner *ngIf="isLoading"></mat-spinner>
+    </div>
