@@ -23,7 +23,7 @@ export class PeopleService {
     });
   }
 
-  getPerson(id: string): Observable<PersonDetails> {
+  getPerson(id: string | null): Observable<PersonDetails> {
     return this.http.get<PersonDetails>(`${this.baseUrl}/people/${id}`);
   }
 }

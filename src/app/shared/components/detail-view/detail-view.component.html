@@ -1,7 +1,7 @@
 <div class="detail-view">
     <h1 class="detail-view__title">Details</h1>
-
     <div class="detail-view__properties">
-        <p class="detail-view__property"></p>
+        <p class="detail-view__property" *ngFor="let item of items; let i = index">{{ i + 1 }}. {{ item }}</p>
     </div>
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
 </div>

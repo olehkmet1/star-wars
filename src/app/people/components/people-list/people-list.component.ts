@@ -9,10 +9,10 @@ import { PeopleService } from '../../services/people.service';
 })
 export class PeopleListComponent implements OnInit {
 
-  private page = 1;
+  private page: number = 1;
   public count: number = 0;
   public peopleList: PersonDetails[] = [];
-  public isLoading = false;
+  public isLoading: boolean = false;
 
   constructor(private peopleService: PeopleService) { }
 
